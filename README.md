@@ -25,3 +25,9 @@ git commit -m "added commit command on readme file"
 // or to add and commit at once
 git commit -a -m "added commit command on readme file"
 ```
+
+###git status:
+Shows status of files in the index versus the working directory. It will list out files that are untracked (only in your working directory), modified (tracked but not yet updated in your index), and staged (added to your index and ready for committing).
+```
+git status
+```
