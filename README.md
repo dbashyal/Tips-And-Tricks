@@ -22,6 +22,7 @@ git clone git@github.com:dbashyal/Git-tips-and-tricks.git master
 Takes all of the changes written in the index, creates a new commit object pointing to it and sets the branch to point to that new commit.
 ```
 git commit -m "added commit command on readme file"
+
 // or to add and commit at once
 git commit -a -m "added commit command on readme file"
 ```
@@ -37,8 +38,30 @@ Lists existing branches, including remote branches if '-a' is provided. Creates 
 ```
 git branch
 git branch -a
+
 // create branch
 git branch -b feature/scroll
+
 // delete branch
 git branch -d feature/scroll
 ```
+
+###git prune:
+This will delete all remote branches that do not exist locally.
+```
+git push --prune origin
+
+// effectively make the remote look like the local copy of the repo (local heads, remotes and tags are mirrored on remote)
+git push --mirror
+
+// As of Git v1.7.0, you can delete a remote branch using
+git push origin --delete feature/scroll
+
+// you can also delete remote branch like this
+git push origin :feature/scroll
+```
+
+
+# resources
+1. http://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-both-locally-and-in-github
+2. http://www.siteground.com/tutorials/git/commands.htm
