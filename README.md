@@ -31,3 +31,14 @@ Shows status of files in the index versus the working directory. It will list ou
 ```
 git status
 ```
+
+###git branch:
+Lists existing branches, including remote branches if '-a' is provided. Creates a new branch if a branch name is provided.
+```
+git branch
+git branch -a
+// create branch
+git branch -b feature/scroll
+// delete branch
+git branch -d feature/scroll
+```
