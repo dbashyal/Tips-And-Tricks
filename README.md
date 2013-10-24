@@ -70,6 +70,11 @@ $ git push origin --delete feature/scroll
 $ git push origin :feature/scroll
 ```
 
+###Find list of conflicting files
+```
+git diff --name-only --diff-filter=U
+```
+
 
 # resources
 1. http://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-both-locally-and-in-github
