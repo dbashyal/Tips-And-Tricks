@@ -51,12 +51,15 @@ $ git branch <name_of_your_new_branch>
 // push to remote
 $ git push origin <name_of_your_new_branch>
 
-// delete branch
-$ git branch -d <name_of_your_new_branch>
+// delete local branch
+$ git branch -D <name_of_your_branch>
+
+// delete remote branch
+$ git push origin :<name_of_your_branch>
 ```
 
 ###git prune:
-This will delete all remote branches that do not exist locally.
+This will delete all remote branches that do not exist locally. To delete selected branch from remote use above code.
 ```
 $ git push --prune origin
 
