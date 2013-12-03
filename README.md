@@ -78,6 +78,19 @@ $ git push origin :feature/scroll
 git diff --name-only --diff-filter=U
 ```
 
+###Git tag
+```
+// Create new tag
+git tag -a 1.3.4 -m 'Tagged as version 1.3.4'
+
+// Push new tag to repository
+git push origin 1.3.4
+
+// Delete tag
+git tag -d 1.3.4
+git push origin :refs/tags/1.3.4
+```
+
 
 # resources
 1. http://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-both-locally-and-in-github
