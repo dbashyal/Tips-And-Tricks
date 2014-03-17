@@ -91,6 +91,11 @@ git tag -d 1.3.4
 git push origin :refs/tags/1.3.4
 ```
 
+###Git restore deleted file which is yet to commit
+```
+git checkout HEAD deleted-file.php
+```
+
 
 # resources
 1. http://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-both-locally-and-in-github
