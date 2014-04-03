@@ -33,6 +33,12 @@ Edit/Amend last git commit message
 $ git commit --amend -m "New commit message"
 ```
 
+###git ignore file mode
+This will ignore files that don't have content change.
+```
+$ git config core.filemode false
+```
+
 ###git status:
 Shows status of files in the index versus the working directory. It will list out files that are untracked (only in your working directory), modified (tracked but not yet updated in your index), and staged (added to your index and ready for committing).
 ```
