@@ -97,6 +97,12 @@ git tag -d 1.3.4
 git push origin :refs/tags/1.3.4
 ```
 
+##delete
+###Git Delete Last Commit: not pushed
+```
+git reset --soft HEAD~1
+```
+
 ###Git restore deleted file which is yet to commit
 ```
 git checkout HEAD deleted-file.php
