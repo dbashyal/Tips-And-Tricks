@@ -101,6 +101,7 @@ git push origin :refs/tags/1.3.4
 ###Git Delete Last Commit: not pushed
 ```
 git reset --soft HEAD~1
+// --soft option will delete the commit but it will leave all your changed files "Changes to be committed", as git status would put it.
 ```
 
 ###Git restore deleted file which is yet to commit
