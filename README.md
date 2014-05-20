@@ -109,7 +109,23 @@ git reset --soft HEAD~1
 git checkout HEAD deleted-file.php
 ```
 
+###Git Save password / authentication
+```
+// store
+git config credential.helper store
+
+// unset
+// current repo
+git config credential.helper store
+// global
+git config --global credential.helper store
+
+// or use cache, where timeout is in seconds
+git config --global credential.helper 'cache --timeout=xx'
+```
+
 
 # resources
 1. http://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-both-locally-and-in-github
 2. http://www.siteground.com/tutorials/git/commands.htm
+3. http://stackoverflow.com/a/12240995/534525 (save pwd)
