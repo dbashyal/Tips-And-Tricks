@@ -1,6 +1,8 @@
 Git Tips and Tricks
 ===================
 
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=dbashyal&url=https://github.com/dbashyal&title=Github Repos&language=&tags=github&category=software)
+
 Purpose of this repo is to collect all the git tips and tricks. You can suggest more if you know anything useful that can be listed here.
 
 ##Git Frequently used and useful command line codes
