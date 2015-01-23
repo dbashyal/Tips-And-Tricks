@@ -40,6 +40,11 @@ This will ignore files that don't have content change.
 ```
 $ git config core.filemode false
 ```
+If that doesn't work, you can run below command if you see files modified but with not content difference.
+```
+git add -uv
+```
+
 
 ###git status:
 Shows status of files in the index versus the working directory. It will list out files that are untracked (only in your working directory), modified (tracked but not yet updated in your index), and staged (added to your index and ready for committing).
