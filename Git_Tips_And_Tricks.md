@@ -48,8 +48,10 @@ git add -uv
 ###Git Undo add / Reset File / Git Unstage File
 ```
 git reset <file>
+
 // or
 git reset HEAD <file>
+
 // Overwrite local changes with last commit from HEAD
 git checkout -- <file>
 ```
