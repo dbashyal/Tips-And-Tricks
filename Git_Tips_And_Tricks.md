@@ -45,6 +45,15 @@ If that doesn't work, you can run below command if you see files modified but wi
 git add -uv
 ```
 
+###Git Undo add / Reset File / Git Unstage File
+```
+git reset <file>
+// or
+git reset HEAD <file>
+// Overwrite local changes with last commit from HEAD
+git checkout -- <file>
+```
+
 
 ###git status:
 Shows status of files in the index versus the working directory. It will list out files that are untracked (only in your working directory), modified (tracked but not yet updated in your index), and staged (added to your index and ready for committing).
