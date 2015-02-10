@@ -54,6 +54,9 @@ git reset HEAD <file>
 
 // Overwrite local changes with last commit from HEAD
 git checkout -- <file>
+
+// remove previously committed file from git repository
+git rm --cached <added_file_to_undo>
 ```
 
 
