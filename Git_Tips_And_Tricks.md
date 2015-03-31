@@ -20,12 +20,6 @@ Makes a Git repository copy from a remote source. Also adds the original locatio
 $ git clone git@github.com:dbashyal/Git-tips-and-tricks.git master
 ```
 
-##git pull/fetch force rewrite local to be same as origin HEAD branch
-```
-git fetch --all
-git reset --hard origin/<current_branch>
-```
-
 ###git commit:
 Takes all of the changes written in the index, creates a new commit object pointing to it and sets the branch to point to that new commit.
 ```
@@ -51,12 +45,18 @@ If that doesn't work, you can run below command if you see files modified but wi
 git add -uv
 ```
 
+##git pull/fetch force rewrite local to be same as origin HEAD branch
+```
+git fetch --all
+git reset --hard origin/<current_branch>
+```
+
 ###Git Undo add / Reset File / Git Unstage File
 ```
 git reset <file>
 
 // or
-git reset HEAD <file>
+git reset <HEAD | commit> <file>
 
 // Overwrite local changes with last commit from HEAD
 git checkout -- <file>
@@ -65,6 +65,16 @@ git checkout -- <file>
 git rm --cached <added_file_to_undo>
 ```
 
+##Git delete / reset / unstage local commit
+###Git Delete Last Commit: not pushed
+```
+git reset commit_hash
+// or
+git reset --soft HEAD~1
+// --soft option will delete the commit 
+// but it will leave all your changed files 
+// "Changes to be committed", as git status would put it.
+```
 
 ###git status:
 Shows status of files in the index versus the working directory. It will list out files that are untracked (only in your working directory), modified (tracked but not yet updated in your index), and staged (added to your index and ready for committing).
@@ -122,13 +132,6 @@ git push origin 1.3.4
 // Delete tag
 git tag -d 1.3.4
 git push origin :refs/tags/1.3.4
-```
-
-##delete
-###Git Delete Last Commit: not pushed
-```
-git reset --soft HEAD~1
-// --soft option will delete the commit but it will leave all your changed files "Changes to be committed", as git status would put it.
 ```
 
 ###Git restore deleted file which is yet to commit
