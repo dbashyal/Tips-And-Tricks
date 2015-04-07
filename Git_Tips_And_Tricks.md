@@ -121,6 +121,20 @@ $ git push origin :feature/scroll
 git diff --name-only --diff-filter=U
 ```
 
+##Find difference between committed and modified file
+```
+git diff <-option> <filename>
+// Options:
+// --ignore-space-at-eol
+// => Ignore changes in whitespace at EOL.
+// -b (--ignore-space-change)
+// => Ignore changes in amount of whitespace. This ignores whitespace at line end, and considers all other sequences of one or more whitespace characters to be equivalent.
+// -w (--ignore-all-space)
+// => Ignore whitespace when comparing lines. This ignores differences even if one line has whitespace where the other line has none.
+// --ignore-blank-lines
+// => Ignore changes whose lines are all blank.
+```
+
 ###Git tag
 ```
 // Create new tag
