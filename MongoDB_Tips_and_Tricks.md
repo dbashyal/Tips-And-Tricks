@@ -61,3 +61,8 @@ I am a first time user of mongo db, so I am going to note down all commands I'll
 # prettify result
 > db.trademe_photos.find().pretty() 
 ```
+
+* Select * from db.collections where md5="4sjdhfjhjf"
+```php
+> db.trademe_photos.findOne({md5:'4sjdhfjhjf'})
+```
