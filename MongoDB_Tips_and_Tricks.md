@@ -30,3 +30,10 @@ $ show collections
 // or
 $ show tables
 ```
+
+* Select * from db.collections
+```php
+$ use myproject # dbname
+$ db.trademe_photos.find() # trademe_photos is a collection inside db 'myproject'
+$ db.trademe_photos.find().pretty() # prettify result
+```
