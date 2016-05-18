@@ -15,9 +15,11 @@ $ show dbs
 $ use <dbname>
 ```
 
-* Show Collections
+* Show Collections / Tables
 
 ```php
 # Print a list of all collections for current database
 $ show collections
+// or
+$ show tables
 ```
