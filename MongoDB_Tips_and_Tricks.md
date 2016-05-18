@@ -1,5 +1,5 @@
 # Mongo DB
-I am a first time user of mongo db, so I am going to note down all commands I'll need to use again and again. You can start mondo admin on shell as:
+I am a first time user of mongo db, so I am going to note down all commands I'll need to use again and again. You can start mongo admin on shell as:
 
 ```php
 > mongo admin
