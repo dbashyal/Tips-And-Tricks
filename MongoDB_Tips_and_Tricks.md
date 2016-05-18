@@ -31,6 +31,17 @@ $ show collections
 $ show tables
 ```
 
+* insert into db.collections
+```php
+$ use myproject # dbname
+$ db.trademe_photos.insert({name: 'image1.jpg', data: 'data 1 goes here', md5: '1sjdhfjhjf'}) # one insert
+$ db.trademe_photos.insert(
+[
+  {name: 'image2.jpg', data: 'data 2 goes here', md5: '2sjdhfjhjf'},
+  {name: 'image3.jpg', data: 'data 3 goes here', md5: '3sjdhfjhjf'}
+]
+) # multiple inserts
+```
 * Select * from db.collections
 ```php
 $ use myproject # dbname
