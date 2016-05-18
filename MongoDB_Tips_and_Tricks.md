@@ -69,6 +69,16 @@ I am a first time user of mongo db, so I am going to note down all commands I'll
 
 * Update table set (new data) where md5="4sjdhfjhjf"
 ```php
-> db.trademe_photos.update({md5:'4sjdhfjhjf'},{$set:{name: 'image4a.jpg', data:'sdhfjsd/=', md5:'4akjshfdjsh'}})
+> db.trademe_photos.update(
+	{md5:'4sjdhfjhjf'},
+	{
+		$set:
+		{
+			name: 'image4a.jpg', 
+			data:'sdhfjsd/=', 
+			md5:'4akjshfdjsh'
+		}
+	}
+)
 // @link https://docs.mongodb.com/manual/reference/operator/update-field/
 ```
