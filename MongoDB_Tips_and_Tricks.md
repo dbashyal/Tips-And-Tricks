@@ -13,6 +13,8 @@ I am a first time user of mongo db, so I am going to note down all commands I'll
 ```php
 # Print a list of all databases on the server.
 > show dbs
+// or
+> show databases
 ```
 
 * Use Database
