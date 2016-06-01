@@ -62,6 +62,12 @@ I am a first time user of mongo db, so I am going to note down all commands I'll
 > db.trademe_photos.find().pretty() 
 ```
 
+* select * from db.collection where column/field doesn't exists or has defined value
+* Get rows if listingId doesn't exists or has value 0 or less.
+```php
+db.trademe_listings.find({expired:0, $or:[{listingId:{$exists: false}}, {listingId:{$lte:0}}]})
+```
+
 * Select * from db.collections where md5="4sjdhfjhjf"
 ```php
 > db.trademe_photos.findOne({md5:'4sjdhfjhjf'})
