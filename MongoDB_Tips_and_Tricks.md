@@ -73,6 +73,11 @@ db.trademe_listings.find({expired:0, $or:[{listingId:{$exists: false}}, {listing
 > db.trademe_photos.findOne({md5:'4sjdhfjhjf'})
 ```
 
+* find * from db.collection sort by field/column 'lowesSize' in Ascending Order. NOTE: double bracket **[[..]]**
+```php
+var cursor = db.collection(MongoDB.collections.listings).find({}, {"sort" : [['lowesSize', 'asc']]});
+```
+
 * Update table set (new data) where md5="4sjdhfjhjf"
 ```php
 > db.trademe_photos.update(
