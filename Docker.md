@@ -17,3 +17,5 @@ FOR /f "tokens=*" %i IN ('docker ps -a -q') DO docker rm -f %i
 // linux
 docker rm -f $(docker ps -a -q)
 ```
+
+3> If you get error `An error occurred trying to connect: Get http://%2F%2F.%2Fpipe%2Fdocker_engine/v1.24/containers/json: open //./pipe/docker_engine: The system cannot find the file specified.` make sure docker for windows is running and check 'Docker for windows services' in windows services.
