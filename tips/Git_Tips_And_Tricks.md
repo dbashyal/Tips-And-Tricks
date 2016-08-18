@@ -173,6 +173,9 @@ git config --global credential.helper 'cache --timeout=xx'
 // open you git bash terminal and run
 $ eval `ssh-agent -s`
 $ ssh-add
+// or, open your ~/.bash_profile (or, ~/.bashrc) and add those lines and open new bash window, you will have to enter pass phrase only once.
+eval `ssh-agent -s`
+ssh-add
 ```
 
 
