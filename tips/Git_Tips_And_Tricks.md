@@ -169,6 +169,10 @@ git config --global credential.helper store
 
 // or use cache, where timeout is in seconds
 git config --global credential.helper 'cache --timeout=xx'
+
+// open you git bash terminal and run
+$ eval `ssh-agent -s`
+$ ssh-add
 ```
 
 
