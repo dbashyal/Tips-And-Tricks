@@ -25,7 +25,7 @@ docker-machine env default
 // you should have a working docker now
 ```
 
-* attach local drive to container using (-v localfolder:remotefolder)
+## attach local drive to container using (-v localfolder:remotefolder)
 ```php
 docker run -d -p 80:80 -p 3306:3306 -v c:/_projects:/data --name codefight codefight/cms
 
