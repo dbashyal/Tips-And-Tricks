@@ -42,6 +42,11 @@ $ ls -la /data
 // default environment is 'default'
 docker-machine ssh
 
+// or, using docker
+// docker exec -i -t  <container ID or NAME> /bin/bash
+// don't use run, as it will create new container
+docker exec -i -t  codefight /bin/bash
+
 // or in PuTTy
 IP: 192.168.99.100
 user: docker
