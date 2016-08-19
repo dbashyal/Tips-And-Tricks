@@ -38,7 +38,8 @@ $ ls -la /data
 
 ## SSH
 ```php
-// run 
+// run: docker-machine ssh <your_environment>
+// default environment is 'default'
 docker-machine ssh
 
 // or in PuTTy
