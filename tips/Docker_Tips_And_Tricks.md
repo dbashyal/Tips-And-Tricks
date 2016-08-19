@@ -63,4 +63,8 @@ docker-machine ssh
 IP: 192.168.99.100
 user: docker
 password: tcuser
+
+// Once logged in, to switch to root user, just run
+sudo -i
+//i.e.: docker@default:~$ sudo -i
 ```
