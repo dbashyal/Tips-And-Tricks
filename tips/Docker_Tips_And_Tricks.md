@@ -1,23 +1,5 @@
 # Just started to learn docker say archiving some commands here
 
-* force remove all images
-```php
-// windows
-FOR /f "tokens=*" %i IN ('docker images -a -q') DO docker rmi -f %i
-
-// linux
-docker rmi -f $(docker images -a -q)
-```
-
-* force remove all containers
-```php
-// windows 
-FOR /f "tokens=*" %i IN ('docker ps -a -q') DO docker rm -f %i
-
-// linux
-docker rm -f $(docker ps -a -q)
-```
-
 * If you get error `An error occurred trying to connect: Get http://%2F%2F.%2Fpipe%2Fdocker_engine/v1.24/containers/json: open //./pipe/docker_engine: The system cannot find the file specified.` make sure docker for windows is running and check 'Docker for windows services' in windows services. 
 
 > Just noticed that if you setup docker using windows CMD, you will get that error in cygwin bash shell and vice-versa, so looks like we need to stick with one and always use same one. So may be better to use the docker cli, that comes with the install, so paths are not messed up?
@@ -67,4 +49,22 @@ password: tcuser
 // Once logged in, to switch to root user, just run
 sudo -i
 //i.e.: docker@default:~$ sudo -i
+```
+
+## force remove all images
+```php
+// windows
+FOR /f "tokens=*" %i IN ('docker images -a -q') DO docker rmi -f %i
+
+// linux
+docker rmi -f $(docker images -a -q)
+```
+
+## force (stop and) remove all containers
+```php
+// windows 
+FOR /f "tokens=*" %i IN ('docker ps -a -q') DO docker rm -f %i
+
+// linux or bash/power shell
+docker rm -f $(docker ps -a -q)
 ```
