@@ -53,3 +53,14 @@ docker exec -it codefight /bin/bash
 // check if folder attached or not
 $ ls -la /data
 ```
+
+## SSH
+```php
+// run 
+docker-machine ssh
+
+// or in PuTTy
+IP: 192.168.99.100
+user: docker
+password: tcuser
+```
