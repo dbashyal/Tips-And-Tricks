@@ -176,6 +176,17 @@ $ ssh-add
 // or, open your ~/.bash_profile (or, ~/.bashrc) and add those lines and open new bash window, you will have to enter pass phrase only once.
 eval `ssh-agent -s`
 ssh-add
+
+// for windows CMD, alternative method that worked is:
+// Run: 
+FOR /F "delims=;" %G IN ('ssh-agent') DO @Echo SET %G
+// and save output to .bat and modify as below and run that bat file.
+@echo off
+set SSH_AUTH_SOCK=/tmp/ssh-840uhYyWibks/agent.11372
+set SSH_AGENT_PID=4820
+ssh-add
+
+// or just download sshlogin.bat file and run it. check root of this repo for the file.
 ```
 
 
