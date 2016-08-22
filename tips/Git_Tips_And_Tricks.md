@@ -187,6 +187,10 @@ set SSH_AGENT_PID=4820
 ssh-add
 
 // or just download sshlogin.bat file and run it. check root of this repo for the file.
+
+// UPDATE :: found a bat file in latest git that you can run
+// C:\Program Files\Git\cmd\start-ssh-agent.bat
+start-ssh-agent
 ```
 
 
