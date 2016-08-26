@@ -1,4 +1,5 @@
-# Just started to learn docker say archiving some commands here
+# Docker Tips and Tricks
+##### I have just started to learn/use docker. I am archiving some useful commands here as I find one that I'll need when I forget and need to google again.
 
 * If you get error `An error occurred trying to connect: Get http://%2F%2F.%2Fpipe%2Fdocker_engine/v1.24/containers/json: open //./pipe/docker_engine: The system cannot find the file specified.` make sure docker for windows is running and check 'Docker for windows services' in windows services. 
 
