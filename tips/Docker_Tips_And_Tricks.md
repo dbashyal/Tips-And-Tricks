@@ -28,7 +28,11 @@ docker-machine env default
 
 ## attach local drive to container using (-v localfolder:remotefolder)
 ```php
-docker run -d -p 80:80 -p 3306:3306 -v C:/Users/dbashyal/docker/codefight:/app --name codefight dbashyal:codefight
+// cd to your dockerfile and build image
+docker build -t dbashyal/codefight .
+
+// create container from above image
+docker run -d -p 80:80 -p 3306:3306 -v C:/Users/dbashyal/docker/codefight:/app --name codefight dbashyal/codefight
 
 // then access the container running
 docker exec -it codefight /bin/bash
