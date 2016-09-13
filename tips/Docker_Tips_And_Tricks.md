@@ -32,7 +32,7 @@ docker-machine env default
 docker build -t dbashyal/codefight .
 
 // create container from above image
-docker run -d -p 80:80 -p 3306:3306 -v C:/Users/dbashyal/docker/codefight:/app --name codefight dbashyal/codefight
+docker run -d -p 80:80 -p 3306:3306 -v C:\Users\dbashyal\docker\codefight:/app --name codefight dbashyal/codefight
 
 // then access the container running
 docker exec -it codefight /bin/bash
