@@ -24,3 +24,4 @@ killall node
 
 ---
 ######Resources
+* [stop all instances of node.js server](http://stackoverflow.com/a/14790921/534525)
