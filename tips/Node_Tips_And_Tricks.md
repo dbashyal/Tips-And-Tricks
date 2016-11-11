@@ -11,3 +11,16 @@ taskkill /pid 14828
 // kill all
 taskkill /f /im node.exe
 ```
+
+#####Linux
+```
+// find and kill only selected
+netstat -nlp | grep :8080
+kill -9 1073
+
+// or, kill all
+killall node
+```
+
+---
+######Resources
