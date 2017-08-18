@@ -79,3 +79,13 @@ FOR /f "tokens=*" %i IN ('docker ps -a -q') DO docker rm -f %i
 // linux or bash/power shell
 docker rm -f $(docker ps -a -q)
 ```
+
+## Unable to share project folder with docker because of firewall (avast on my case)
+1. Go to Hyper-V Manager -> Virtual Switch Manager -> DockerNAT -> Connection Type: change from internal to private, apply, change back to internal, apply
+2. Restart MobyLinuxVM
+3. Restart Docker
+4. Set Docker network profile to 'Private' as described above
+5. Reset file sharing on DockerNAT connection as described above
+6. Go to Docker -> Settings -> Shared Drives and share C:
+
+
