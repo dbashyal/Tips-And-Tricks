@@ -84,8 +84,7 @@ docker rm -f $(docker ps -a -q)
 1. Go to Hyper-V Manager and select your virtual machine -> Virtual Switch Manager (opens new window) -> DockerNAT -> Connection Type: change from internal to private, apply, change back to internal, apply and OK.
 2. Restart MobyLinuxVM (by Stopping service > Turn Off > Start Service.
 3. Restart Docker
-4. Set Docker network profile to 'Private' as described above
-5. Reset file sharing on DockerNAT connection as described above
-6. Go to Docker -> Settings -> Shared Drives and share C:
+4. Set Docker network profile to 'Private' on firewall (On Avast firewall for me).
+5. Go to Docker -> Settings -> Shared Drives and share C: and apply.
 
 
