@@ -35,6 +35,20 @@ Edit/Amend last git commit message
 $ git commit --amend -m "New commit message"
 ```
 
+### git merge - accept files from merging branch
+Steps to merge develop to master.
+```php
+$ git checkout develop && git pull
+$ git checkout master && git pull
+$ git merge -X theirs develop
+```
+
+### git merge conflict with meld
+```php
+$ git config --global merge.tool meld
+$ git config --global mergetool.meld.path "C:\Program Files (x86)\Meld\Meld.exe"
+```
+
 ### git ignore file mode
 This will ignore files that don't have content change.
 ```php
