@@ -5,22 +5,22 @@ Git Tips and Tricks
 
 Purpose of this repo is to collect all the git tips and tricks. You can suggest more if you know anything useful that can be listed here.
 
-##Git Frequently used and useful command line codes
+## Git Frequently used and useful command line codes
 
-###git config: 
+### git config: 
 Set configuration values for user name,email etc
 ```php
 $ git config --global user.name "Damodar Bashyal"
 $ git config --global user.email "git@dltr.org"
 ```
 
-###git clone: 
+### git clone: 
 Makes a Git repository copy from a remote source. Also adds the original location as a remote so you can fetch from it again. If you have permissions you can push your changes to it too.
 ```php
 $ git clone git@github.com:dbashyal/Git-tips-and-tricks.git master
 ```
 
-###git commit:
+### git commit:
 Takes all of the changes written in the index, creates a new commit object pointing to it and sets the branch to point to that new commit.
 ```php
 $ git commit -m "added commit command on readme file"
@@ -29,13 +29,13 @@ $ git commit -m "added commit command on readme file"
 $ git commit -a -m "added commit command on readme file"
 ```
 
-###git amend/edit commit:
+### git amend/edit commit:
 Edit/Amend last git commit message
 ```php
 $ git commit --amend -m "New commit message"
 ```
 
-###git ignore file mode
+### git ignore file mode
 This will ignore files that don't have content change.
 ```php
 $ git config core.filemode false
@@ -45,13 +45,13 @@ If that doesn't work, you can run below command if you see files modified but wi
 git add -uv
 ```
 
-##git pull/fetch force rewrite local to be same as origin HEAD branch
+## git pull/fetch force rewrite local to be same as origin HEAD branch
 ```php
 git fetch --all
 git reset --hard origin/<current_branch>
 ```
 
-###Git Undo add / Reset File / Git Unstage File
+### Git Undo add / Reset File / Git Unstage File
 ```php
 git reset <file>
 
@@ -65,8 +65,8 @@ git checkout -- <file>
 git rm --cached <added_file_to_undo>
 ```
 
-##Git delete / reset / unstage local commit
-###Git Delete Last Commit: not pushed
+## Git delete / reset / unstage local commit
+### Git Delete Last Commit: not pushed
 ```php
 git reset commit_hash
 // or
@@ -76,13 +76,13 @@ git reset --soft HEAD~1
 // "Changes to be committed", as git status would put it.
 ```
 
-###git status:
+### git status:
 Shows status of files in the index versus the working directory. It will list out files that are untracked (only in your working directory), modified (tracked but not yet updated in your index), and staged (added to your index and ready for committing).
 ```php
 $ git status
 ```
 
-###git branch:
+### git branch:
 Lists existing branches, including remote branches if '-a' is provided. Creates a new branch if a branch name is provided.
 ```php
 $ git branch
@@ -101,7 +101,7 @@ $ git branch -D <name_of_your_branch>
 $ git push origin :<name_of_your_branch>
 ```
 
-###git prune:
+### git prune:
 This will delete all remote branches that do not exist locally. To delete selected branch from remote use above code.
 ```php
 $ git push --prune origin
@@ -116,12 +116,12 @@ $ git push origin --delete feature/scroll
 $ git push origin :feature/scroll
 ```
 
-###Find list of conflicting files
+### Find list of conflicting files
 ```php
 git diff --name-only --diff-filter=U
 ```
 
-##Find difference between committed and modified file
+## Find difference between committed and modified file
 ```php
 git diff <-option> <filename>
 // Options:
@@ -138,7 +138,7 @@ git diff <-option> <filename>
 // => Ignore changes whose lines are all blank.
 ```
 
-###Git tag
+### Git tag
 ```php
 // Create new tag
 git tag -a 1.3.4 -m 'Tagged as version 1.3.4'
@@ -151,12 +151,12 @@ git tag -d 1.3.4
 git push origin :refs/tags/1.3.4
 ```
 
-###Git restore deleted file which is yet to commit
+### Git restore deleted file which is yet to commit
 ```php
 git checkout HEAD deleted-file.php
 ```
 
-###Git Save password / authentication
+### Git Save password / authentication
 ```php
 // store
 git config credential.helper store
