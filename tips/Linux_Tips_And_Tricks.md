@@ -20,3 +20,8 @@
 find . -type d -exec chmod 755 {} \;
 find . -type f -exec chmod 644 {} \;
 ```
+
+## Truncate all files in a directory
+```
+for f in *; do >$f; done
+```
