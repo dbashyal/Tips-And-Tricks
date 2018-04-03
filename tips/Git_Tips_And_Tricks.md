@@ -130,6 +130,16 @@ $ git push origin --delete feature/scroll
 $ git push origin :feature/scroll
 ```
 
+### Delete all local branches except the current branch
+```php
+for b in `git branch --no-color --merged | grep -v \*`; do git branch -D $b; done
+```
+
+### Delete all local branches except the selected branches (master / develop)
+```php
+git branch --no-color --merged | grep -v master | grep -v develop | xargs git branch -d
+```
+
 ### Find list of conflicting files
 ```php
 git diff --name-only --diff-filter=U
