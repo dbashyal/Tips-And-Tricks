@@ -132,7 +132,10 @@ $ git push origin :feature/scroll
 
 ### Delete all local branches except the current branch
 ```php
+// delete all merged only
 for b in `git branch --no-color --merged | grep -v \*`; do git branch -D $b; done
+// or delete all
+git branch | grep -v '^*' | xargs git branch -D
 ```
 
 ### Delete all local branches except the selected branches (master / develop)
