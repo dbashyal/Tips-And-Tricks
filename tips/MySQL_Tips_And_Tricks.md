@@ -27,3 +27,13 @@ kill [the id]
 mysql_install_db
 /usr/bin/mysql_secure_installation
 ```
+
+# Run mysql query directly from linux command line
+```bash
+$ mysql -u root -p -e "show databases;"
+$ mysql -u root -p -e "use codefight; select * from config;" | > config.tsv
+; replace tab with comma
+$ sed "s/\t/,/g" config.tsv > config.csv
+; if data already contains comma, do this instead
+$ sed "s/'/\'/;s/\t/\",\"/g;s/^/\"/;s/$/\"/;s/\n//g" config.tsv > config.csv
+```
