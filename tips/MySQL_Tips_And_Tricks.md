@@ -32,8 +32,8 @@ mysql_install_db
 ```bash
 $ mysql -u root -p -e "show databases;"
 $ mysql -u root -p -e "use codefight; select * from config;" | > config.tsv
-; replace tab with comma
+# replace tab with comma
 $ sed "s/\t/,/g" config.tsv > config.csv
-; if data already contains comma, do this instead
+# if data already contains comma, do this instead
 $ sed "s/'/\'/;s/\t/\",\"/g;s/^/\"/;s/$/\"/;s/\n//g" config.tsv > config.csv
 ```
