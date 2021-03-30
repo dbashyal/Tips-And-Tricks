@@ -31,3 +31,10 @@ find . -type f -exec chmod 644 {} \;
 ```bash
 for f in *; do >$f; done
 ```
+
+## Grep commands
+```bash
+grep -RoH "80" ./
+grep -Rie "80" ./
+grep -Rie "listen.*80" ./
+```
