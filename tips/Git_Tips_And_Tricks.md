@@ -134,6 +134,8 @@ $ git push origin :feature/scroll
 ```php
 // delete all merged only
 for b in `git branch --no-color --merged | grep -v \*`; do git branch -D $b; done
+// windows powershell - delete all merged except develop/master
+git for-each-ref --format '%(refname:short)' refs/heads --merged | ForEach-Object { If("develop","master" -notcontains $_) { git branch $_ -d } }
 // or delete all
 git branch | grep -v '^*' | xargs git branch -D
 ```
