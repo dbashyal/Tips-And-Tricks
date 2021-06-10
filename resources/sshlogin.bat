@@ -8,3 +8,6 @@ FOR /F "delims=;" %%G IN ('ssh-agent') do (
 	)
 )
 ssh-add
+
+REM try this new command on latest git
+start-ssh-agent
