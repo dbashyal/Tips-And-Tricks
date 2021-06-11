@@ -14,4 +14,4 @@ mysqldump --hex-blob --skip-triggers --set-gtid-purged=OFF --column-statistics=0
 
 sed -i 's/DEFINER=[^*]*\*/\*/g' /home/damu/backups/${sql_dump_name}
 
-tar -cvzf /home/damu/backups/${sql_dump_name} /home/damu/backups/${sql_dump_name}.tar.gz
+tar -cvzf /home/damu/backups/${sql_dump_name}.tar.gz /home/damu/backups/${sql_dump_name}
