@@ -8,3 +8,5 @@
 * ```git branch -av``` - or include remote branches too
 * ```git log -1 --abbrev-commit``` - details about last commit
 * ```git log --oneline``` - full list of commits and short commit hash
+
+[Back to Index](https://github.com/dbashyal/Tips-And-Tricks/edit/master/tips/Git_Tips_And_Tricks.md)
