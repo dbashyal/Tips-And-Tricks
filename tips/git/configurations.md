@@ -69,3 +69,5 @@ $ git config --global core.abbrev 8
 # now run below to get short hash
 $ git log --pretty=oneline
 ```
+
+[Back to Index](https://github.com/dbashyal/Tips-And-Tricks/edit/master/tips/Git_Tips_And_Tricks.md)
