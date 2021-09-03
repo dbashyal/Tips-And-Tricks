@@ -1,18 +1,14 @@
 Git Tips and Tricks
 ===================
 
-[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=dbashyal&url=https://github.com/dbashyal&title=Github Repos&language=&tags=github&category=software)
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=dbashyal&url=https://github.com/dbashyal&title=Github-Repos&language=&tags=github&category=software)
 
 Purpose of this repo is to collect all the git tips and tricks. You can suggest more if you know anything useful that can be listed here.
 
 ## Git Frequently used and useful command line codes
 
-### git config: 
-Set configuration values for user name,email etc
-```php
-$ git config --global user.name "Damodar Bashyal"
-$ git config --global user.email "git@dltr.org"
-```
+* [Set/update git configurations](https://github.com/dbashyal/Tips-And-Tricks/blob/master/tips/git/configurations.md)
+* [Find git commit hash](https://github.com/dbashyal/Tips-And-Tricks/blob/master/tips/git/find-commit-hash.md)
 
 ### git clone: 
 Makes a Git repository copy from a remote source. Also adds the original location as a remote so you can fetch from it again. If you have permissions you can push your changes to it too.
@@ -41,22 +37,6 @@ Steps to merge develop to master.
 $ git checkout develop && git pull
 $ git checkout master && git pull
 $ git merge -X theirs develop
-```
-
-### git merge conflict with meld
-```php
-$ git config --global merge.tool meld
-$ git config --global mergetool.meld.path "C:\Program Files (x86)\Meld\Meld.exe"
-```
-
-### git ignore file mode
-This will ignore files that don't have content change.
-```php
-$ git config core.filemode false
-```
-If that doesn't work, you can run below command if you see files modified but with not content difference.
-```php
-git add -uv
 ```
 
 ## git pull/fetch force rewrite local to be same as origin HEAD branch
@@ -184,44 +164,6 @@ git push origin :refs/tags/1.3.4
 ```php
 git checkout HEAD deleted-file.php
 ```
-
-### Git Save password / authentication
-```php
-// store
-git config credential.helper store
-
-// unset
-// current repo
-git config credential.helper store
-// global
-git config --global credential.helper store
-
-// or use cache, where timeout is in seconds
-git config --global credential.helper 'cache --timeout=xx'
-
-// open you git bash terminal and run
-$ eval `ssh-agent -s`
-$ ssh-add
-// or, open your ~/.bash_profile (or, ~/.bashrc) and add those lines and open new bash window, you will have to enter pass phrase only once.
-eval `ssh-agent -s`
-ssh-add
-
-// for windows CMD, alternative method that worked is:
-// Run: 
-FOR /F "delims=;" %G IN ('ssh-agent') DO @Echo SET %G
-// and save output to .bat and modify as below and run that bat file.
-@echo off
-set SSH_AUTH_SOCK=/tmp/ssh-840uhYyWibks/agent.11372
-set SSH_AGENT_PID=4820
-ssh-add
-
-// or just download sshlogin.bat file and run it. check root of this repo for the file.
-
-// UPDATE :: found a bat file in latest git that you can run
-// C:\Program Files\Git\cmd\start-ssh-agent.bat
-start-ssh-agent
-```
-
 
 # resources
 1. http://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-both-locally-and-in-github
