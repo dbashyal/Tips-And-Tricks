@@ -1,4 +1,10 @@
-## delete cache
+# MySQL Tips and Tricks
+
+### Convert mysql timezone of a field while running query
+```sql
+SELECT * FROM sales_creditmemo where CONVERT_TZ(created_at  , 'UTC', 'Australia/Sydney') >= '2021-08-02'
+```
+
 #### clean the disc cache in the terminal
 
 `sync && echo 3 | sudo tee /proc/sys/vm/drop_caches`
