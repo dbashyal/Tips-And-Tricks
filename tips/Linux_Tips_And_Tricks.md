@@ -38,3 +38,12 @@ grep -RoH "80" ./
 grep -Rie "80" ./
 grep -Rie "listen.*80" ./
 ```
+
+# user add / delete
+```bash
+# -m creates user's home directory
+# -s $(which bash) set their login shell
+sudo useradd -m -s $(which bash) -G sudo <USERNAME>
+# -- to delete
+userdel <USERNAME>
+```
