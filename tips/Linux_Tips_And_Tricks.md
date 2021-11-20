@@ -47,3 +47,8 @@ sudo useradd -m -s $(which bash) -G sudo <USERNAME>
 # -- to delete
 userdel <USERNAME>
 ```
+
+# copy file from 1 server to another
+```bash
+scp websites.tar.gz USERNAME@example.com:/home/user/
+```
