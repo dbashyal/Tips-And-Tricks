@@ -70,4 +70,4 @@ $ git config --global core.abbrev 8
 $ git log --pretty=oneline
 ```
 
-[Back to Index](https://github.com/dbashyal/Tips-And-Tricks/edit/master/tips/Git_Tips_And_Tricks.md)
+[Back to Index](https://github.com/dbashyal/Tips-And-Tricks/blob/master/tips/Git_Tips_And_Tricks.md)
