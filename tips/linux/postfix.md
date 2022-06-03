@@ -33,7 +33,7 @@ Update sasl_passwd
 ```bash
 $ sudo nano /etc/postfix/sasl_passwd
 # replace all with
-[email-smtp.us-west-2.amazonaws.com]:587 SMTP_USER:SMTP_PASSWORD
+email-smtp.us-west-2.amazonaws.com:587 SMTP_USER:SMTP_PASSWORD
 # save and
 $ sudo chmod -v 0600 /etc/postfix/sasl_passwd
 ```
