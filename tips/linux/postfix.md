@@ -30,6 +30,7 @@ smtp_tls_CAfile = /etc/ssl/certs/ca-certificates.crt
 ```
 
 Update sasl_passwd
+
 ```bash
 $ sudo nano /etc/postfix/sasl_passwd
 # replace all with
@@ -39,9 +40,11 @@ $ sudo chmod -v 0600 /etc/postfix/sasl_passwd
 ```
 
 At a Linux/Unix shell prompt, type the following postmap command to create a hashmap database for MTA credentials:
+
 `$ sudo postmap -v hash:/etc/postfix/sasl_passwd`
 
 Configure CA certificate path for verification
+
 `$ sudo postconf -e 'smtp_tls_CAfile = /etc/ssl/certs/ca-certificates.crt'`
 
 ## Step 5 - Test configuration using the Linux/Unix CLI
@@ -51,7 +54,8 @@ $ sudo systemctl restart postfix
 $ sudo systemctl status postfix
 ```
 
-Test integration of Amazon SES with Postfix
+Test integration of Amazon SES with Postfix:
+
 ```
 $ sendmail -f webmaster@example.biz webmaster@example.com
 From: John Doe <webmaster@exmple.biz>
