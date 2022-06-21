@@ -122,7 +122,7 @@ git branch | grep -v '^*' | xargs git branch -D
 
 ### Delete all local branches except the selected branches (master / develop)
 ```php
-git branch --no-color --merged | grep -v master | grep -v develop | xargs git branch -d
+git branch --no-color --merged | grep -v master | grep -v develop | grep -v \* | xargs git branch -d
 ```
 
 ### Find list of conflicting files
